@@ -1597,7 +1597,7 @@ class Designer:
             if self._unconstrained_form:
                 opt_result = minimize(
                     fun=criterion,
-                    x0=e0,
+                    x0=e0.flatten(),
                     method=optimizer,
                     options=opt_options,
                     jac=not self._fd_jac,
